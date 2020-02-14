@@ -6,13 +6,13 @@ from .models import City
 @registry.register_document
 class CityDocument(Document):
     class Index:
-        name = 'cities'
+        name = 'city'
 
     geocoords = fields.GeoPointField()
 
     def prepare_geocoords(self, instance):
         return {
-            'lon': instance.latitude,
+            'lon': instance.longitude,
             'lat': instance.latitude
         }
 
