@@ -1,4 +1,4 @@
-from django_elasticsearch_dsl import Document
+from django_elasticsearch_dsl import Document, fields
 from django_elasticsearch_dsl.registries import registry
 from .models import City
 
@@ -7,6 +7,14 @@ from .models import City
 class CityDocument(Document):
     class Index:
         name = 'cities'
+
+    geocoords = fields.GeoPointField()
+
+    def prepare_geocoords(self, instance):
+        return {
+            'lon': instance.latitude,
+            'lat': instance.latitude
+        }
 
     class Django:
         model = City

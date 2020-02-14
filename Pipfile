@@ -20,6 +20,8 @@ psycopg2-binary = "*"
 whitenoise = "*"
 pandas = "*"
 django-elasticsearch-dsl-drf = "*"
+httpie = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6"
