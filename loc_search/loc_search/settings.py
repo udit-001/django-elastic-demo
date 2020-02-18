@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     "django_extensions",
     "django_elasticsearch_dsl",
     "import_export",
-    "location"
+    "location",
+    "articles",
+    "tags",
+    "core",
+    "categories",
 ]
 
 MIDDLEWARE = [
