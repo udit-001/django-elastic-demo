@@ -12,7 +12,7 @@ class ExpertArticleDocument(Document):
         'slug': fields.TextField(),
     })
 
-    id = IntegerField(attr="id")
+    id = fields.IntegerField(attr="id")
     
     class Index:
         name = 'articles'
