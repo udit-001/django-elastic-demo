@@ -1,10 +1,4 @@
-    1  ls
-    2  cd data/
-    3  ls
-    4  exit
-    5  ls
-    6  exit
-    7  ls
+
     8  docker pull postgres:11
     9  sudo docker pull postgres:11
    10  docker run -d --name postgresdb -p 5432:5432 postgres:11
@@ -13,13 +7,9 @@
    13  sudo docker exec -d postgresdb psql -U postgres -c "create database djsearch"
    14  docker ps
    15  sudo docker ps
-   16  exit
-   17  ls
-   18  exit
    19  sudo apt-get update
    20  sudo apt-get upgrade
    21  curl -fsSL https://get.docker.com -o get-docker.sh
-   22  ls
    23  sudo sh get-docker.sh
    24  docker status
    25  docker --help
@@ -32,44 +22,22 @@
    32  sudo docker images
    33  docker ps
    34  sudo docker ps
-   35  ls
    36  mkdir data
-   37  ls
    38  tree .
-   39  ls data/
    40  file data/IN.json 
-   41  ls -al -r
-   42  cd data/
-   43  ls
-   44  ls -al
-   45  ls -alh
    46  curl -XPOST 'localhost:9200/logs/my_app' -H 'Content-Type: application/json' -d'
    47  curl -XPOST 'localhost:9200/logs/my_app' -H 'Content-Type: application/json' -d IN.json
    48  curl -XPOST 'localhost:9200/logs/my_app' -H 'Content-Type: application/json' -d@IN.json
-   49  ls
    50  python3
    51  ..
-   52  ls
-   53  cd ..
-   54  ls
    55  ps aux
    56  ps aux | grep pythoo
    57  ps aux | grep python
-   58  exit
-   59  ls
-   60  cd django-search/
-   61  ls
-   62  exit
-   63  ls
-   64  cd django-search/
-   65  ls
    66  docker ps
    67  sudo docker ps
-   68  ls
    69  pip3 install pipenv
    70  sudo apt install python3-pip
    71  pip3 install pipenv
-   72  ls
    73  pipenv install -r requirements.txt 
    74  pipenv 
    75  sudo pipenv install -r requirements.txt 
@@ -87,66 +55,29 @@
    87  pip install pipenv
    88  sudo pip install pipenv
    89  pipenv
-   90  ls
    91  pipenv install -r requirements.txt 
    92  pipenv install -r requirements.txt --python 3.7
-   93  ls
    94  mv Pipfile Pipf.ex
-   95  ls
    96  mv Pipfile.lock Pipf.lock
-   97  ls
    98  pipenv install -r requirements.txt 
    99  pipenv shell
-  100  ls
-  101  cd loc_search/
-  102  ls
   103  python manage.py runserver
   104  pipenv install python-decouple
-  105  ls
   106  code .
-  107  ls
   108  python manage.py runserver
-  109  cd loc_search/
-  110  ls
   111  nano settings.py 
-  112  cd ../..
-  113  ls
-  114  cd loc_search/
   115  python manage.py runserver
-  116  ls
-  117  ls -al
-  118  cd ..
-  119  ls
-  120  ls -al
-  121  cd loc_search/
-  122  ls
   123  nano .env
-  124  ls
   125  rm db.sqlite3 
   126  python manage.py runserver
-  127  ls
-  128  cd loc_search/
   129  python manage.py runserver
   130  pipenv install gunicorn
   131  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000
-  132  ls
-  133  cd loc_search/
-  134  ls
   135  nano settings.py 
-  136  ls
-  137  cd ..
   138  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000
-  139  ls
   140  pipenv install whitenoise
-  141  ls
-  142  cd loc_search/
-  143  ls
   144  nano settings.py 
-  145  cd ..
-  146  ls
   147  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000
-  148  ls
-  149  ls -al
   150  nano .env
   151  docker ps
   152  sudo docker ps
@@ -155,18 +86,13 @@
   155  python manage.py runserver
   156  pipenv install psycopg2
   157  pipenv install psycopg2-binary
-  158  exit
   159  pipenv install psycopg2-binary
   160  sudo apt-get install libpq-dev
   161  pipenv install psycopg2-binary
   162  history
   163  history | grep -i sudo apt-get
   164  history | grep -i 'sudo apt-get*'
-  165  ls
   166  history | grep gunicorn
-  167  ls
-  168  cd loc_search/
-  169  ls
   170  python manage.py runserver
   171  python manage.py shell_plus
   172  python manage.py shell
@@ -174,238 +100,112 @@
   174  pipenv install ipython
   175  python
   176  ipython
-  177  ls
-  178  cd loc_search/
-  179  ls
   180  nano settings.py 
-  181  ls
-  182  cd ..
-  183  ls
   184  python manage.py shell_plus
   185  python manage.py dbshell
-  186  ls
   187  python manage.py makemigrations
-  188  ls
-  189  cd location/
-  190  ls
-  191  cat models.py 
-  192  cd ..
   193  python manage.py makemigrations location
-  194  ls
-  195  cd location/
-  196  ls
-  197  cd migrations/
-  198  ls
-  199  cd ..
   200  python manage.py migrate
   201  python manage.py createsuperuser
-  202  ls
   203  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000
-  204  ls
-  205  cd location/
-  206  ls
-  207  cat models.py 
-  208  nano models.py 
-  209  cd ..
   210  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000
   211  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  212  ls
   213  pip freeze
-  214  ls
-  215  cd loc_search/
-  216  ls
   217  nano settings.py 
-  218  cd ..
-  219  ls
   220  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  221  ls
   222  pipenv uninstall django-import-export
   223  pipenv install django-import-export
-  224  ls
-  225  cd ..
-  226  ls
   227  cat Pipf.ex 
   228  cat Pipf.lock 
-  229  ls
   230  cat Pipf
   231  cat Pipfile
   232  pipenv uninstall autopep8 
-  233  ls
   234  pew
-  235  exit
   236  cat Pipf
   237  cat Pipfile 
-  238  ls
   239  mv requirements.txt re.txt
-  240  ls
-  241  exit
   242  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  243  ls
-  244  cd loc_search/
   245  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  246  ls
-  247  cd location/
-  248  ls
   249  touch documents.py
   250  nano documents.py 
-  251  exit
-  252  ls
-  253  cd django-search/
-  254  ls
-  255  cd loc_search/
   256  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
   257  pipenv shell
-  258  exit
   259  pipenv install autopep8 --dev
-  260  ls
-  261  exit
-  262  ls
-  263  cd django-search/
-  264  ls
   265  pipenv shell
-  266  exit
-  267  ls
-  268  cd django-search/
-  269  ls
   270  ps aux | grep -i python
   271  ps aux
   272  ps aux | grep -i python
   273  pidof python
   274  kill 25390
   275  ps aux | grep -i python
-  276  ls
   277  pipenv shell
   278  sudo apt-get install python-psycopg2
   279  sudo apt-get remove python-psycopg2
   280  sudo apt autoremove
   281  sudo apt-get install python3-psycopg2
-  282  ls
   283  pipenv shell
   284  pip
   285  pip install pew
   286  sudo pip install pew
-  287  pew ls
-  288  ls
   289  rm Pipfile.lock 
   290  rm Pipfile 
   291  pew rm django-search-HkZherPM
-  292  ls
   293  cat Pipf.ex 
   294  pipenv shell
-  295  ls
-  296  pew ls
   297  pew rm django-search-HkZherPM
   298  pipenv shell --python 3.7
   299  pipenv shell
-  300  pew ls
   301  pew rm django-search-HkZherPM
-  302  pew ls
-  303  ls
   304  pipenv shell
-  305  ls
   306  rm Pipfile 
-  307  ls
-  308  pew ls
   309  pew rm django-search-HkZherPM
-  310  ls
   311  pipenv shell
   312  cat Pipf.ex 
   313  pipenv install django==2.2
   314  pipenv install python-decouple django-import-export dj-database-url 
   315  pipenv install django-elasticsearch-dsl
-  316  ls
   317  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
   318  pipenv install gunicorn
   319  cat Pipfile
   320  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  321  ls
-  322  cd loc_search/
   323  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
   324  pipenv install django-extensions
   325  pipenv install ipython
-  326  ls
   327  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
   328  pipenv install psycopg2-binary
   329  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
   330  pipenv install whitenoise
   331  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  332  ls
   333  pip freeze
-  334  ls
-  335  cd loc_search/
-  336  ls
   337  nano settings.py 
-  338  ls
-  339  cd loc_search/
-  340  cd ..
-  341  ls
   342  mv cities.py loc_search/
-  343  ls
-  344  cd loc_search/
-  345  ls
   346  python manage.py shell_plus
-  347  ls
   348  python manage.py 
   349  python manage.py shell_plus
-  350  ls
-  351  cd ..
-  352  ls
-  353  cd ..
-  354  ls
-  355  cd data/
-  356  ls
   357  cp IN.json ../django-search/loc_search/
-  358  ls
-  359  cd ../../
-  360  ls
-  361  cd ubuntu/
-  362  ls
-  363  cd django-search/loc_search/
-  364  ls
   365  pipenv install pandas
-  366  ls
   367  pipenv install jupyter --dev
-  368  ls
   369  jupyter notebook --port 8000
   370  jupyter notebook --port 8000 --generate-config
   371  jupyter notebook --port 8000 
   372  nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
   373  jupyter notebook --port 8000 
   374  nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
-  375  ls
   376  jupyter notebook 
-  377  exit
-  378  ls
-  379  cd data/
-  380  ls
   381  cp IN.json ~/django-search/
-  382  exit
-  383  ls
-  384  cd data/
-  385  ls
   386  nano IN.json 
   387  head IN.json 
   388  cat IN.json | cat -c 1-5
   389  cat IN.json | cut -c 1-5
   390  cat IN.json | cut -c 1-10
   391  cat IN.json | cut -c 1-20
-  392  ls
   393  cp IN.json cities.py
-  394  ls
   395  cat cities.py | cut -c 1-20
-  396  ls
   397  mv cities.py ..
-  398  ls
-  399  cd ..
-  400  ls
   401  mv cities.py django-search/
-  402  ls
-  403  cd django-search/
-  404  ls
   405  pipenv shell
   406  pip install jupyter
   407  pip install jupyter --user
-  408  ls
   409  pip install pandas --user
   410  jupytr notebook
   411  jupyter
@@ -419,29 +219,14 @@
   419  docker images
   420  sudo docker images
   421  history | grep docker
-  422  exit
   423  docker ps -aq
   424  sudo docker ps -aq
   425  sudo docker ps -a
   426  history | grep docker stop
   427  history | grep 'docker stop'
-  428  exit
-  429  ls
-  430  cd django-search/
-  431  ls
-  432  cd ..
-  433  ls
-  434  cd django-search/
-  435  ls
-  436  cd loc_search/
   437  ks
-  438  ls
-  439  cd ..
-  440  ls
   441  cat 'Cities Data.ipynb' 
   442  cat 'Cities Data.ipynb' | grep read
-  443  exit
-  444  ls
   445  history | grep docker 
   446  docker ps -a
   447  sudo docker ps -a
@@ -449,93 +234,33 @@
   449  sudo docker start 961cb22e3e81
   450  docker ps
   451  sudo docker ps
-  452  exit
-  453  ls
-  454  cd django-search/
-  455  ls
   456  cat IN.json | cut -c 1-10
-  457  ls
   458  nano IN.json 
   459  cat IN.json | cut -c 1-10
-  460  ls
   461  jupyter notebook 
-  462  ls
-  463  cd loc_search/
-  464  ls
   465  python manage.py shell_plus
   466  pip freeze
   467  python manage.py shell_plus
-  468  exit
   469  ps aux
   470  ps aux | grep jupyter
-  471  ls
-  472  cd django-search/
-  473  ls
   474  cp india.json loc_search/
-  475  ls
-  476  cd loc_search/
-  477  cd ..
   478  pipenv shell
-  479  ls
-  480  exit
-  481  ls
-  482  cd loc_search/
   483  gunicorn loc_search.wsgi:application --bind 0.0.0.0:8000 --log-level DEBUG
-  484  exit
-  485  ls
-  486  cd django-search/
-  487  ls
   488  pipenv shell
-  489  exit
-  490  cd loc_search/
-  491  exit
-  492  ls
-  493  cd django-search/
-  494  ls
   495  pipenv shell
-  496  exit
-  497  ls
-  498  exit
-  499  ls
-  500  exit
-  501  ls
-  502  cd loc_search/
-  503  LS
-  504  cd loc_search/
-  505  LS
-  506  ls
-  507  cd ..
-  508  ls
   509  python manage.py search_index --rebuild
   510  python manage.py 
-  511  ls
-  512  cd loc_search/
-  513  ls
   514  cat settings.py 
-  515  ls
   516  nano settings.py 
-  517  cd ..
-  518  ls
   519  python manage.py 
   520  python manage.py search_index --rebuild
-  521  ls
   522  python manage.py search_index --rebuild
-  523  ls
   524  python manage.py search_index --rebuild
-  525  ls
   526  python manage.py shell_plus
-  527  ls
   528  docker ps
-  529  exit
-  530  ls
-  531  cd loc_search/
-  532  ls
   533  python manage.py search_index --rebuild
-  534  ls
   535  python manage.py search_index --rebuild
-  536  ls
   537  python manage.py shell_plus
-  538  ls
   539  docker ps
   540  sudo docker ps
   541  docker ps -a
@@ -556,9 +281,6 @@
   556  docker rmi 7cb69da7148d
   557  sudo docker rmi 7cb69da7148d
   558  sudo docker images
-  559  exit
-  560  ls
-  561  cd django-search/
   562  pipenv shell
   563  sudo docker ps
   564  history | grep docker
@@ -572,18 +294,8 @@
   572  sudo docker ps -a
   573  history | grep docker
   574  sudo docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.5.1
-  575  ls
   576  docker ps
   577  sudo docker ps
-  578  ls
-  579  cd loc_search/
-  580  ls
-  581  cd ../..
-  582  ls
-  583  cd django-search/
-  584  ls
   585  pipenv shell
-  586  exit
-  587  ls
   588  history
   589  history > bash_history.txt
