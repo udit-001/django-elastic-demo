@@ -45,6 +45,6 @@ class ExpertArticleDocument(Document):
 
         def get_queryset(self):
         """Not mandatory but to improve performance we can select related in one sql request"""
-                return super().get_queryset().prefetch_related("tags").select_related(
-                    "board", "sub_category"
-                )
+            return super().get_queryset().prefetch_related("tags").select_related(
+                "board", "sub_category"
+            )
