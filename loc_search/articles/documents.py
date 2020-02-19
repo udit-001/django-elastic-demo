@@ -25,5 +25,7 @@ class ExpertArticleDocument(Document):
             "description",
             "views",
             "timestamp",
+            "board",
+            "sub_category",
         ]
         related_models = [CustomTag]
