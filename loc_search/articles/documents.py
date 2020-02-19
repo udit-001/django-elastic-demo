@@ -1,6 +1,7 @@
 from django_elasticsearch_dsl import Document, fields
 from django_elasticsearch_dsl.registries import registry
 from .models import ExpertArticle
+from categories.models import Board, SubCategory
 from tags.models import CustomTag
 
 
@@ -12,7 +13,21 @@ class ExpertArticleDocument(Document):
         'slug': fields.TextField(),
     })
 
-    id = fields.IntegerField(attr="id")
+    board = fields.ObjectField(properties={
+        "name"= fields.TextField(),
+        "min_age"= fields.IntegerField(),
+        "max_age"= fields.IntegerField(),
+        "slug"= fields.TextField()
+    })
+
+    sub_category = fields.ObjectField(properties={
+        "name"= fields.TextField(),
+        "slug"= fields.TextField()
+    })
+
+    id = fields.IntegerField()
+
+    timestamp = fields.DateField()
     
     class Index:
         name = 'articles'
@@ -24,8 +39,12 @@ class ExpertArticleDocument(Document):
             "slug",
             "description",
             "views",
-            "timestamp",
-            "board",
-            "sub_category",
+            # "timestamp"
         ]
-        related_models = [CustomTag]
+        related_models = [CustomTag, Board, SubCategory]
+
+        def get_queryset(self):
+        """Not mandatory but to improve performance we can select related in one sql request"""
+                return super().get_queryset().prefetch_related("tags").select_related(
+                    "board", "sub_category"
+                )
