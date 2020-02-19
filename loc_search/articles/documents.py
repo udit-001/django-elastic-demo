@@ -14,15 +14,15 @@ class ExpertArticleDocument(Document):
     })
 
     board = fields.ObjectField(properties={
-        "name"= fields.TextField(),
-        "min_age"= fields.IntegerField(),
-        "max_age"= fields.IntegerField(),
-        "slug"= fields.TextField()
+        "name": fields.TextField(),
+        "min_age": fields.IntegerField(),
+        "max_age": fields.IntegerField(),
+        "slug": fields.TextField()
     })
 
     sub_category = fields.ObjectField(properties={
-        "name"= fields.TextField(),
-        "slug"= fields.TextField()
+        "name": fields.TextField(),
+        "slug": fields.TextField()
     })
 
     id = fields.IntegerField()
