@@ -9,11 +9,13 @@ from tags.models import CustomTag
 class ExpertArticleDocument(Document):
 
     tags = fields.ObjectField(properties={
+        "id": fields.IntegerField(),
         'name': fields.TextField(),
         'slug': fields.TextField(),
     })
 
     board = fields.ObjectField(properties={
+        "id": fields.IntegerField(),
         "name": fields.TextField(),
         "min_age": fields.IntegerField(),
         "max_age": fields.IntegerField(),
